@@ -9,10 +9,9 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 ![bg left:40% 80%](./img/logo.png)
 
-# **WORKSHOP**
+# **CI/CD - GitHub Actions**
 
-Slides voor NAAM workshop van het IT-lab
-
+Slides voor CI/CD - GitHub Actions workshop van het IT-lab
 
 ---
 
@@ -20,26 +19,24 @@ Slides voor NAAM workshop van het IT-lab
 
 ---
 
-
 # Meevolgen op:
 
-https://hogent-it-lab.github.io/NAAMREPOSITORY/slides <!-- URL naar de slides -->
+https://hogent-it-lab.github.io/ci-cd-workshop/slides <!-- URL naar de slides -->
 
 ![QR bg right contain](./img/link_qr.png) <!-- QR-code naar de slides -->
 
 ---
 
-# Wat is [WORKSHOP-ONDERWERP]?
+# Wat is CI/CD?
 
 - Eerste slide
-- Korte uiteenzetting misschien?
-- Dit kies je natuurlijk allemaal zelf!
-
 
 ---
 
-# Waarom [WORKSHOP-ONDERWERP]?
+# Waarom CI/CD?
 
 - Dit is een tweede slide
-- Je begint nu wel het plaatje te zien
-- Nu kan je copy-pasten en customizen naar hartelust!
+
+---
+
+# GitHub Actions
