@@ -187,7 +187,7 @@ code {
 }
 </style>
 
-```
+```yml
 name: Deploy to GitHub Pages
 
 on:
@@ -195,6 +195,9 @@ on:
     branches:
       - main
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   deploy:
@@ -228,6 +231,15 @@ jobs:
   - `gh-pages` branch gebruiken als source
   - De root van deze branch zal als statische content aangeboden worden
   - Even geduld na het instellen...
+  - Nu kan je jouw statische website zien via https://<gebruikersnaam>.github.io/<repository-naam>
+
+---
+
+# 6. Extra informatie
+
+- Via GitHub pages kan je dus via het `*.github.io` domein gratis statisch hosten
+- MAAR: je kan ook een [eigen domeinnaam koppelen](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site)!
+- Vandaar dat URL bij demo er heel anders uitziet dan bij jullie
 
 ---
 
