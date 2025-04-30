@@ -44,7 +44,7 @@ https://hogent-it-lab.github.io/ci-cd-workshop/slides <!-- URL naar de slides --
 
 # CI/CD
 
-![bg:10% 10%](./img/ci-cd-loop.png)
+![bg 70%](./img/ci-cd-loop.png)
 
 ---
 
@@ -68,7 +68,7 @@ https://hogent-it-lab.github.io/ci-cd-workshop/slides <!-- URL naar de slides --
 
 # Pipeline
 
-![bg:60% 60%](./img/pipeline-image.png)
+![bg 80%](./img/pipeline-image.png)
 
 ---
 
@@ -84,7 +84,7 @@ https://hogent-it-lab.github.io/ci-cd-workshop/slides <!-- URL naar de slides --
 
 <!-- Image van verschillende tools die bestaan -->
 
-![bg:60% 60%](./img/ci-cd-examples.png)
+![bg 60%](./img/ci-cd-examples.png)
 
 ---
 
