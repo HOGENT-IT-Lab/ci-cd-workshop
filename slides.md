@@ -15,12 +15,6 @@ Slides voor CI/CD - GitHub Actions workshop van het IT-lab
 
 ---
 
-# Github Actions
-
-![bg left:100% 60%](./img/github-actions-logo.png) <!-- Plaats voor logo voor openingsslide, foefel gerust met de sizes van de bg -->
-
----
-
 # Meevolgen op:
 
 https://hogent-it-lab.github.io/ci-cd-workshop/slides <!-- URL naar de slides -->
@@ -279,5 +273,5 @@ export default [
     rules: {},
   },
 ];
-
 ´´´
+
