@@ -262,7 +262,7 @@ jobs:
 
 - Nieuw bestaand in root van repository: `eslint.config.js`
 
-```js
+```
 // eslint.config.js
 export default [
   {
