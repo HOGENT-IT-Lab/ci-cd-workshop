@@ -274,3 +274,29 @@ export default [
 ];
 ```
 
+---
+# Andere toepassingen
+
+- Testing voor eender welke programmeertaal
+- Syntax checking (**linting**) en afdwingen van regels
+- Bouwen van documentatie voor een project (denk aan `Javadoc`!)
+- Automatisch bouwen van Python of andere packages (**npm**, **PyPi**)
+- Software *Dockerizen* via een `Dockerfile` en images naar `Dockerhub`
+
+---
+
+# Héél concreet voorbeeld
+
+- IT-Lab heeft ook een Godot-workshop (game engine)
+- Source code kan je op GitHub bijhouden
+- Mogelijkheid tot builden van code en hosten op GitHub Pages
+- Eventueel koppelen met eigen domeinnaam
+- Voorbeeld hiervan is te vinden via volgende [URL](https://knightguy.alexanderveldeman.be/)
+
+---
+
+# The sky is the limit!
+
+- Toepassingen zijn heel breed 
+- Veel mogelijkheiden
+- Kan jouw (IT-)leven enorm vergemakkelijken
