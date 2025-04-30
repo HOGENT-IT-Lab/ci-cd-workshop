@@ -29,18 +29,28 @@ https://hogent-it-lab.github.io/ci-cd-workshop/slides <!-- URL naar de slides --
 
 ---
 
-# Wat is CI/CD?
+# Inhoud sessie (in a nutshell)
 
-- Continuous Integration, Continuous Delivery
-- Geautomatiseerd integreren van code in de codebase
-- Pipelines!
-<!-- ![bg:60% 80%](./img/ci-cd-loop.png) -->
+- Wat is CI/CD? 
+- Waarom CI/CD gebruiken?
+- Welke tooling bestaat er?
+- Praktische toepassing: GitHub Actions
 
 ---
 
-# Pipeline
+# Wat is CI/CD?
 
-<!-- ![bg:60% 60%](./img/pipeline-image.png) -->
+- Continuous Integration, Continuous Delivery(/Deployment)
+- Code in de codebase wordt automatisch getest, gebouwd en opgezet
+- Vaak in verschillende 'omgevingen' (Staging en Production) 
+- Name of the game: **pipelines**!!
+
+
+---
+
+# CI/CD
+
+![bg:10% 10%](./img/ci-cd-loop.png)
 
 ---
 
@@ -53,34 +63,75 @@ https://hogent-it-lab.github.io/ci-cd-workshop/slides <!-- URL naar de slides --
 
 ---
 
-# Tools
+# DevOps - filosofie en practices
 
-<!-- Image van verschillende tools die bestaan -->
+- Silo's van **Dev**elopment en **Op**eration**s** afbreken -> nauwe interactie tussen beide nodig!
+- CI/CD staat **centraal** binnen de filosofie van DevOps
+- Doel: automatisatie van testen, builden en deployen
+- Verhoogde snelheid, frequentie én minder bugs
 
 ---
 
+# Pipeline
+
+![bg:60% 60%](./img/pipeline-image.png)
+
+---
+
+# Pipeline - standaard workflow
+
+- Software testen (bv. syntax checking/linting, unit testen, ...)
+- Software builden (afhankelijk van programmeertaal/setting)
+- Software deployen
+- Elke fase bevat één of meerdere stappen
+---
+
+# Tools - overview
+
+<!-- Image van verschillende tools die bestaan -->
+
+![bg:60% 60%](./img/ci-cd-examples.png)
+
+---
+
+# Tools - enkele voorbeelden
+
+- **GitHub Actions** - built-in GitHub, goede integratie
+- **Jenkins** - open-source, veel opties voor opzetten en configureren
+- **GitLab CI/CD** - ~ GitHub Actions, maar dan voor GitLab
+- CircleCI - cloud-based optie, ook free tier
+
+---
 
 # GitHub Actions
 
 - CI/CD van GitHub
 - Eenvoudig om op te zetten bij GitHub-repositories
-- Integreert logischerwijs met heel wat features van GitHub
+- Integreert logischerwijs met heel wat features van GitHub!
 
 ---
 
-# Vandaag op het menu
+# Praktische kennismaking - vandaag op het menu
 
-- Praktische toepassing van GitHub Actions
-- Opzetten van repository met basic statische website
+- Praktische toepassing van GitHub Actions!
+- Opzetten van GH-repository met basic statische website
 - Pipeline: automatisch deployen van website met GitHub Pages
 
 ---
 
 # GitHub repository opzetten
 
+Twee opties:
+
+1. Een eigen GitHub repository aanmaken
+2. Clone nemen van onze template repository
 ---
 
 # Repository aanvullen met code
+
+- Zorg voor een statische website (HTML/CSS + JavaScript)
+- Een eigen project of een nieuwe dummy site mag zeker
+- 
 
 ---
 
@@ -94,7 +145,7 @@ https://hogent-it-lab.github.io/ci-cd-workshop/slides <!-- URL naar de slides --
 
 ---
 
-# Pipeline definiëren - yml file
+# Voorbeeld - fragment publish-slides.yml file
 
 ```yml
 name: "Export and publish slides"
