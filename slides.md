@@ -73,8 +73,8 @@ https://hogent-it-lab.github.io/ci-cd-workshop/slides <!-- URL naar de slides --
 
 # Pipeline - standaard workflow
 
-- Software testen (bv. syntax checking/linting, unit testen, ...)
 - Software builden (afhankelijk van programmeertaal/setting)
+- Software testen (bv. syntax checking/linting, unit testen, ...)
 - Software deployen
 - Elke fase bevat één of meerdere stappen
 ---
