@@ -50,8 +50,7 @@ https://hogent-it-lab.github.io/ci-cd-workshop/slides <!-- URL naar de slides --
 
 # Waarom CI/CD?
 
-- Snelheid!
-- Automatisatie!
+- Automatisatie -> snelheid
 - Transparantie en efficiëntie
 - Testing!!
 
