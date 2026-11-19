@@ -1,13 +1,8 @@
 ---
-marp: true
-theme: gaia
-_class: lead
-paginate: true
-backgroundColor: #fff
-backgroundImage: url('https://marp.app/assets/hero-background.svg')
+title: "IT-Lab - CI/CD"
 ---
 
-![bg left:40% 80%](./img/logo.png)
+![](./img/logo.png)
 
 # **CI/CD - GitHub Actions**
 
@@ -17,9 +12,7 @@ Slides voor CI/CD - GitHub Actions workshop van het IT-lab
 
 # Meevolgen op:
 
-https://hogent-it-lab.github.io/ci-cd-workshop/slides <!-- URL naar de slides -->
-
-![QR bg right contain](./img/link_qr.png) <!-- QR-code naar de slides -->
+https://hogent-it-lab.github.io/ci-cd-workshop <!-- URL naar slides
 
 ---
 
@@ -44,7 +37,7 @@ https://hogent-it-lab.github.io/ci-cd-workshop/slides <!-- URL naar de slides --
 
 # CI/CD
 
-![bg 70%](./img/ci-cd-loop.png)
+![](./img/ci-cd-loop.png)
 
 ---
 
@@ -67,7 +60,7 @@ https://hogent-it-lab.github.io/ci-cd-workshop/slides <!-- URL naar de slides --
 
 # Pipeline
 
-![bg 80%](./img/pipeline-image.png)
+![](./img/pipeline-image.png)
 
 ---
 
@@ -83,7 +76,7 @@ https://hogent-it-lab.github.io/ci-cd-workshop/slides <!-- URL naar de slides --
 
 <!-- Image van verschillende tools die bestaan -->
 
-![bg 60%](./img/ci-cd-examples.png)
+![](./img/ci-cd-examples.png)
 
 ---
 
@@ -138,18 +131,38 @@ https://hogent-it-lab.github.io/ci-cd-workshop/slides <!-- URL naar de slides --
 # Voorbeeldsnippet .yml file
 
 ```yml
-name: "Export and publish slides"
 on:
-    # Add manual trigger option
-    workflow_dispatch:
+  push:
+    branches:
+      - main
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  publish:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v7
+      - uses: actions/configure-pages@v6
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: pip install mkslides
+      - run: mkslides build slides/
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: ./site
+      - id: deployment
+        uses: actions/deploy-pages@v5
 ```
 ---
 

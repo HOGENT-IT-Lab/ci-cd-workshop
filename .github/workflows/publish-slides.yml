@@ -1,33 +1,32 @@
-name: "Export and publish slides"
 on:
-    # Add trigger on push to main branch
-    push:
-      branches: ["main"]
-    # Add manual trigger option
-    workflow_dispatch:
+  push:
+    branches:
+      - main
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  publish:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Convert markdown to PDF
-        uses: KoharaKazuya/marp-cli-action@v3
-        # Potentially add config file to repo or extra options?
+      - uses: actions/checkout@v7
+      - uses: actions/configure-pages@v6
+      - uses: actions/setup-python@v7
         with:
-          config-file: ./.marprc-ci.yml
-
-      # - name: Store output PDF
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: slides
-      #     path: ./slides
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+          python-version: '3.12'
+      - run: pip install mkslides
+      - run: mkslides build slides/
+      - uses: actions/upload-pages-artifact@v5
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./slides
+          path: ./site
+      - id: deployment
+        uses: actions/deploy-pages@v5
