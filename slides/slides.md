@@ -245,7 +245,6 @@ jobs:
 
 - Via GitHub pages kan je dus via het `*.github.io` domein gratis statisch hosten
 - MAAR: je kan ook een [eigen domeinnaam koppelen](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site)!
-- Vandaar dat URL bij demo er heel anders uitziet dan bij jullie
 
 ---
 
