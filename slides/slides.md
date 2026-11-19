@@ -281,7 +281,7 @@ jobs:
 
 # Uitbreiding - configuratie van syntax check
 
-- Nieuw bestaand in root van repository: `eslint.config.js`
+- Nieuw bestand in root van repository: `eslint.config.js`
 
 ```
 // eslint.config.js
