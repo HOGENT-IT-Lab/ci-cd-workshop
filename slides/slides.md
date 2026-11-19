@@ -2,8 +2,6 @@
 title: "IT-Lab - CI/CD"
 ---
 
-![](./img/logo.png)
-
 # **CI/CD - GitHub Actions**
 
 Slides voor CI/CD - GitHub Actions workshop van het IT-lab
