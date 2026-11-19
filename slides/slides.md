@@ -126,6 +126,18 @@ https://hogent-it-lab.github.io/ci-cd-workshop
 
 ---
 
+# Tussendoortje: YAML...?
+
+- Speciale datastructuur
+  - Herkenbare syntax
+  - Indentatie, indentatie, indentatie...
+- Speciale naam
+  - Eerst: Yet Another Markup Language
+  - Nu: YAML Ain't Markup Language (recursive acronym!)
+
+---
+
+
 # Voorbeeldsnippet .yml file
 
 ```yml
