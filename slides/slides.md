@@ -208,26 +208,28 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - uses: actions/checkout@v7
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v5
 ```
 
 ---
@@ -235,17 +237,16 @@ jobs:
 # 4. Nakijken
 
 - Op de GitHub-repository zal je nu het volgende zien:
-  - Nieuwe branch aangemaakt: `gh-pages`
   - Onder het tabblad `Actions` kan je jouw workflows zien
   - Merk op: we kunnen deze workflow nu ook manueel starten via de webinterface.
+  - Maar: workflow faalt automatisch!
 
 ---
 
-# 5. Koppelen aan GitHub pages
+# 5.GitHub Actions instellen voor Pages
 
 - Laatste stap: GitHub pages configureren via webinterface
-  - `gh-pages` branch gebruiken als source
-  - De root van deze branch zal als statische content aangeboden worden
+  - Settings > Pages > Build and Deploy > GitHub Actions
   - Even geduld na het instellen...
   - Nu kan je jouw statische website zien via https://<gebruikersnaam>.github.io/<repository-naam>
 
