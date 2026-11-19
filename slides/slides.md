@@ -2,7 +2,7 @@
 title: "IT-Lab - CI/CD"
 ---
 
-# **CI/CD - GitHub Actions**
+# CI/CD - GitHub Actions
 
 Slides voor CI/CD - GitHub Actions workshop van het IT-lab
 
