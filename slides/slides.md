@@ -10,7 +10,7 @@ Slides voor CI/CD - GitHub Actions workshop van het IT-lab
 
 # Meevolgen op:
 
-https://hogent-it-lab.github.io/ci-cd-workshop <!-- URL naar slides
+https://hogent-it-lab.github.io/ci-cd-workshop
 
 ---
 
