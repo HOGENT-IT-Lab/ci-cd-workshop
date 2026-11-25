@@ -234,10 +234,10 @@ jobs:
 
 # 4. Nakijken
 
-- Op de GitHub-repository zal je nu het volgende zien:
+- Op de GitHub-repository (grafische interface GitHub):
   - Onder het tabblad `Actions` kan je jouw workflows zien
   - Merk op: we kunnen deze workflow nu ook manueel starten via de webinterface.
-  - Maar: workflow faalt automatisch!
+  - Maar: workflow faalt automatisch??
 
 ---
 
