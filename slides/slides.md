@@ -116,10 +116,9 @@ https://hogent-it-lab.github.io/ci-cd-workshop
 
 # 3. Pipeline gaan definiëren
 
-- Verschillende stappen:
-  - Branch aanmaken op remote repository: `gh-pages`
-  - Broncode van de main repo binnenhalen op die branch
-  - Branch gaan deployen met GitHub pages
+- Verschillende stappen (hier beperkt):
+  - Broncode van de main repo binnenhalen
+  - Source code gaan deployen met GitHub pages als statische site
 - GitHub Actions: werkt met workflows op basis van `.yml` files!
 
 ---
@@ -174,7 +173,7 @@ jobs:
 ```
 ---
 
-# 3. Pipeline gaan definiëren - mappenstructuur
+# 3. Pipeline - mappenstructuur
 
 - Nieuwe directory aanmaken in de repository: `.github`
   - Hierin nog een nieuwe subdirectory maken: `workflows`
@@ -183,7 +182,7 @@ jobs:
 
 ---
 
-# 3. Pipeline gaan definiëren - workflow file opvullen + push
+# 3. Pipeline - workflow file
 
 - Pipeline zal eerst bestaan uit de volgende stappen:
   - 1. GitHub repository binnenhalen
@@ -191,7 +190,7 @@ jobs:
 
 ---
 
-# 3. Pipeline gaan definiëren - workflow file opvullen + push
+# 3. Pipeline - push
 
 <style scoped>
 code {
