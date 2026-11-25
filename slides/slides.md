@@ -72,8 +72,6 @@ https://hogent-it-lab.github.io/ci-cd-workshop
 
 # Tools - overview
 
-<!-- Image van verschillende tools die bestaan -->
-
 ![](./img/ci-cd-examples.png)
 
 ---
@@ -315,6 +313,22 @@ export default [
 - Mogelijkheid tot builden van code en hosten op GitHub Pages
 - Eventueel koppelen met eigen domeinnaam
 - Voorbeeld hiervan is te vinden via volgende [URL](https://knightguy.alexanderveldeman.be/)
+
+---
+
+
+# Concreet voorbeeld 2 
+
+- VIC - datacenter door studenten beheerd
+- Think VirtualBox but bigger and better
+- Alles manueel opzetten -> onmogelijk veel werk!
+- Ook dit kan je automatiseren met CI/CD! (gevanceerd)
+
+---
+
+# VIC - pipeline voorbeeldje
+
+![](./img/vic_deploy_vm_pipeline.png)
 
 ---
 
